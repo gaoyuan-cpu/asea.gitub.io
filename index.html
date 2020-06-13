@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 	
 	<head>
@@ -19,7 +20,7 @@
 			            z-index: 99;
 			            border: none;
 			            outline: none;
-			            background-color: deepskyblue;/* 设置背景颜色，你可以设置自己想要的颜色或图片 */
+			            background-image: linear-gradient(to top, #09203f 0%, #537895 100%);/* 设置背景颜色，你可以设置自己想要的颜色或图片 */
 			            color: white;/* 文本颜色 */
 			            cursor: pointer;
 			            padding: 15px;
@@ -27,6 +28,7 @@
 			        }
 			
 			            #myBtn:hover {
+							transition: all 1s;
 			                background-color: #555;
 			            }
 				
@@ -51,9 +53,7 @@
 				text-align:right;
 				transition: all 1s;
 			}
-			.guanyu{
-				
-			}
+			
 			#dazi:hover{
 				
 				transition: all 3s;
@@ -73,11 +73,12 @@
 				height: 100%;
 				line-height: 300px;
 				margin-top: -130px;
-				background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1591969336522&di=6431446c8bf3b574a8c2cb630e53eb2c&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2017-11-15%2F5a0be5a88ed93.jpg);
+				
 				font-family: "黑体";";
 				animation-name: yuan;
 				    animation-duration: 10s; 
 				    animation-iteration-count: infinite;
+					
 					
 			}
 			@keyframes yuan{
@@ -87,10 +88,11 @@
 				}
 			}
 			.middle{
-				height:500px;
+				height:510px;
 				width:100%;
 				background-color: #e6fdff;
-				box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.25);
+				
+				box-shadow: 0px -5px 5px #000000;
 			}
 			a{
 				text-decoration:none}
@@ -102,7 +104,7 @@
 				color: white;
 				float: right;
 				font-size: smaller;
-				text-shadow: 0 2px 1px  rgba(0,0,0,0.5);
+				text-shadow: 0 1px 2px  rgba(0,0,0,1);
 			
 				
 			}
@@ -128,6 +130,7 @@
 			
 			img{
 				height: 200px;
+				
 			    align: "middle";
 				margin-bottom: 0px;
 				border-radius: 5%;
@@ -137,23 +140,43 @@
 				margin: 0;
 			}
 			body{
-				background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1591932429619&di=35218022740dfc2de41910ea7df4fdea&imgtype=0&src=http%3A%2F%2Fimg.yanj.cn%2Fstore%2Fgoods%2F8394%2F8394_2734b1f98c13e2616b3ac8b874e94363.jpg);
-			    background-repeat: no-repeat;
-				background-position: center,center;
-				background-size: 2000%,3050px;
-				animation-name: backdiv;
-				    animation-duration: 10s; 
-				    animation-iteration-count: infinite;
+				
+				width：100%；
+				     height: 100%;
+				    /* 加载背景图 */
+				    background: url(http://static.simpledesktops.com/uploads/desktops/2019/03/04/zurich.png	)  no-repeat;
+					animation-name: backdi;
+					animation-duration: 20s; 
+					animation-iteration-count: infinite;
+				    /* 背景图垂直、水平均居中 */
+				    background-position: center center;
+				    /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+				    background-attachment: fixed;
+				    /* 让背景图基于容器大小伸缩 */
+				    background-size: cover;
+				    /* 设置背景颜色，背景图加载过程中会显示背景色 */
+					
+					}
+				　　
+			}
+			@keyframes backdi{
+				50%{opacity: 0.3;
+				transition: all 10s;}
+				opacity: 0.6;
+				
 			}
 			.geci{
+					
 				text-align: center;
 				line-height: 40px;
-				color: #00BFFF;
+				color: #00BFFF; 
 				font-family: "arial rounded mt bold";
-				font-size: 20px;
-				transform: skewX(90deg);
-				transform: skewY(0deg);
-				animation-name: huang;
+				font-size: 20px；
+				width: 100%;
+				height: 2200px;
+				box-shadow: 0px -5px 5px #000000;
+				background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+			  		animation-name: huang;
 				    animation-duration: 20s; 
 				    animation-iteration-count: infinite;
 			}
@@ -164,28 +187,15 @@
 			}
 			.footer2{
 				height:50px;
-				background-color: gray;
+				
 				text-align: center;
 				font-size: 15px;
 				color: whitesmoke;
 				line-height: 50px;
 				font-family: "arial rounded mt bold";
-				box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.25);
-			}
-			@keyframes backdiv {
-			    35% {
-			      background: #c8c8c8;
-				  
-			    }
-				50%{
-					background-color:linear-gradient(to right, #243949 0%, #517fa4 100%)
-					opacity: 1;
-				}
 				
-				70%{
-					background-color: linear-gradient(#fff1eb,#ace0f9);
-				opacity: 0.7;
-				}}
+			}
+			
 			@keyframes huang{
 				50%{
 					letter-spacing: 5px;
@@ -197,11 +207,10 @@
 			.button{
 				width: 70px;
 				height: 40px;
-				background-color: linear-gradient(135deg,#56c8ff,#6f99fc) no-repeat;
-				border-radius: 15%;
-				animation-name: jump;
-				    animation-duration: 1s; 
-				    animation-iteration-count: infinite;
+				background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
+				border-radius: 5%;
+				border-width: 0;
+				opacity: 0.5;
 					
 			}
 			#bottom{
@@ -225,20 +234,30 @@
 				transition: all 1.2s;
 				
 			}
-			h2:hover{
-					transform: scale(1.10);
-					color: grey;
-					margin-left: 10px;
-					transition: all 0.8s;
-					
-				}	
+		
 			}
+			
+			
+			h2 {
+				
+				transition:all 1s linear 0s;
+			}
+			h2 {
+				transition:all 1s linear 0s;
+			}
+			h2:hover {
+				padding-left:50px;
+				color: #0b94ff;
+				font-weight: bold;
+			}
+			
+		
 			
 			
 			
 		</style>
 	</head>
-		
+	
 	<script>
 	        // 当网页向下滑动 20px 出现"返回顶部" 按钮
 	        window.onscroll = function () { scrollFunction() };
@@ -258,13 +277,11 @@
 	            document.documentElement.scrollTop = 0;
 	        }
 	    </script>
-	
-	<body >
-		<div id="nav"></div>			
+	<body>		<div id="nav"></div>			
 		</div>
-		<span style="position: fixed;top: 10px;right: 40px;box-shadow: 5px 2px 3px 10px rgba(0,0,0,0.25);border-radius: 2%;">
+		<span style="position: fixed;top: 10px;right: 40px;box-shadow: 2px 2px 3px 5px rgba(0,0,0,0.25);border-radius: 2%;">
 			
-					<a href="#" class="top" style="margin-right: 0px; ">首页</a>
+		<a href="#" class="top" style="margin-right: 0px; ">首页</a>
 		<a href="#" class="top">关于</a>
 		<a href="#" class="top">作品</a>
 		<a href="#" class="top" >日志</a></span>
@@ -273,7 +290,7 @@
 				    &nbsp;&nbsp;Hello! 
 					<br /><br />
 					
-						<h2 style="text-align: right;  ">
+						<h2 style="text-align: right;">
 							OvO!
 						</h2>
 					
@@ -299,26 +316,26 @@
 					
 					
 				</div>
-				<div style="text-align: center;line-height: 40px;color: slategrey" id="zuo">
-					<p id="zuo">你好啊</p>
-					<p id="you">我是xx</p>
-					<p id="zuo">一个啊啊啊啊啊啊啊的技术宅</p>
-					<p id="you">第一次搞网页还有很多不会啊哈</p>
-					<p id="zuo">相信你也发现了导航栏的东西点了没反应哈哈哈</p>
-					<p id="you">怪我还没学到</p>
-					<p id="zuo">这是我的第一个实战练习</p>
-					<p id="you">还望支持一下哈</p>
-					<p id="zuo">下面的按钮是一个神秘入口</p>
-					<p id="you">嘘！</p>
-				
-			</div>
-			</span>
+				<div style="text-align: center;line-height: 40px;color: slategrey; box-shadow: 0px 0px 0px 0px #000000;">
+					<p id="zuo">|你好啊|</p>
+					<p id="you">|我是xx|</p>
+					<p id="zuo">|一个啊啊啊啊啊啊啊的技术宅|</p>
+					<p id="you">|第一次搞网页还有很多不会啊哈|</p>
+					<p id="zuo">|相信你也发现了导航栏的东西点了没反应哈哈哈|</p>
+					<p id="you">|怪我还没学到|</p>
+					<p id="zuo">|这是我的第一个实战练习|</p>
+					<p id="you">|还望支持一下哈|</p>
+					<p id="zuo">|下面的按钮是一个神秘入口|</p>
+					<p id="you" >|嘘！|</p>
+					<br /><br /><br /><br /><br /><br /><br /><br />
+							</div>
+			
 		
-		<div align=center>
-			<br><br><br>
-			<img src="https://dss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3961123251,1745549198&fm=55&app=54&f=JPEG?w=1140&h=640" align=center/>
-			</div>
+		
 			<div class="geci">
+				<br /><br /><br /><br />
+					<img src="https://dss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3961123251,1745549198&fm=55&app=54&f=JPEG?w=1140&h=640" align=center/>
+					
 				<p >
 					<br />
 					Mojito - 周杰伦 (Jay Chou)
@@ -345,8 +362,6 @@
 					<br />
 					所有色彩都因为她说不出话
 					<br />
-					 
-					
 					这爱不落幕 忘了心事的国度
 					<br />
 					 
@@ -413,28 +428,29 @@
 					<br />
 					这是世上最美丽的那双人舞
 				</p>
+				<br /><br />
+				<div id="bottom">
 				
+						<center><a href="https://space.bilibili.com/470490357?from=search&seid=7761165816257300629" ><button type="button" class="button" color="gray">Press</button></a> </center>
+						
+					
+				</div>
 				
 			</div>
 			<br />
-			<div id="bottom">
-				
-					
-					<center><a href="https://space.bilibili.com/470490357?from=search&seid=7761165816257300629" ><button type="button" class="button" color="gray">芝麻开门</button></a> </center>
-					
-				
-			</div>
+			
 			<button onclick="topFunction()" id="myBtn" title="回顶部"><b>返回顶部</b></button>
 			
 		
 		
 		<div class="footer2" >
 			
-				<p>
+				<p style="opacity: 0.3;line-height: 20px;">
 					版权所有：xx
 				</p>
 				
 		</div>
-	
+
+
 	</body>
 </html>
